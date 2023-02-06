@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>doom 3 simulator</title>
+	<style>
+		*
+		{
+			user-select: none;
+		}
+	</style>
+	<script type="text/javascript">
+		document.onclick = click
+		
+		function click() {
+			let count = document.getElementById('count');
+			let value = parseInt(count.innerHTML.substring(0, count.innerHTML.indexOf('/')))
+			count.innerHTML = (value + 1).toString() + '/1000000000000000';
+			
+			if (count.value >= 1000000000000000)
+				alert('congratulations! you\'re a cheater')
+		}
+	</script>
+</head>
+<body>
+	<h1>very realistic doom 3 simulator for weak pcs (one to one)</h1>
+	<hr>
+	<h1 id="count">0/1000000000000000</h1>
+	<h6>(click)</h6>
+</body>
+</html>
